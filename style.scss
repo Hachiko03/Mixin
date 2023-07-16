@@ -36,7 +36,6 @@ p {
 }
 
 .footer {
-    padding-left: 250px;
-    padding-right: 250px;
+    width: 174ch;
     @include article(green, blue , 24px)
 }
