@@ -1,0 +1,40 @@
+
+div {
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    padding: 15px;
+    h1 {
+        text-decoration: underline blue 2px;
+    }
+}
+
+section {
+    display: flex;
+}
+
+@mixin article ($color,$bColor: green,$fSize:1rem) {
+color: $color;
+border: 1px solid $bColor;
+font-size: $fSize;
+p {
+    padding: 20px;
+    font-size: $fSize;
+    text-align: center;
+}
+}
+
+.one , .three {
+    @include article(blue )
+}
+
+.two, .four {
+    @include article(red)
+}
+
+.footer {
+    @include article(green, blue , 24px)
+}
